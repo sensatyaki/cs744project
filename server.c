@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include <stdlib.h>
+#include<stdlib.h>
 #include<sys/types.h>
 #include<sys/socket.h>
 #include<netinet/in.h>
@@ -49,7 +49,7 @@ int main(int argc, char *argv[]){
     error("ERROR reading from socket");
   }
   printf("Here is the message: %s\n", buffer);
-  n = write(newsockfd,"I got ur message:%s\n",18);
+  n = write(newsockfd,"Server says: I got ur message.\n",30);
   if(n<0){
     error("ERROR writing to socket");
   }
